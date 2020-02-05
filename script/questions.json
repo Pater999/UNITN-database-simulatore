@@ -1,0 +1,12 @@
+[
+    {
+        "question": "Which of the following is the correct order of occurrence in a typical SQL statement?",
+        "optionA": "SELECT, GROUP BY, WHERE, HAVING.",
+        "optionB": "SELECT, WHERE, GROUP BY, HAVING.",
+        "optionC": "SELECT, WHERE, HAVING, GROUP BY, SELECT, HAVING, WHERE, GROUP BY",
+        "optionD": "SELECT, HAVING, WHERE, GROUP BY.",
+        "optionE": "",
+        "optionF": "",
+        "correct": "optionB"
+    }
+]
