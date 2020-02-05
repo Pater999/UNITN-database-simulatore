@@ -172,7 +172,10 @@ function caricaDomanda(num) {
 	numDomandaCorrente = num;
 	var n = domandeProposte[num];
     
-    randomOrder = [0, 1, 2];
+    randomOrder = [0, 1];
+    if (domande[n].optionC != "") {
+        randomOrder.push(2);
+    }
     if (domande[n].optionD != "") {
         randomOrder.push(3);
     }
@@ -422,22 +425,24 @@ function showResult(num) {
     }
     str += '</label>'
     str += '</div>'
-    str += '<div class="form-check">'
-    if (risposteDate[num] == "optionC") {
-        str += '<input class="form-check-input" disabled type="radio" name="exampleRadios"  id="optionC" checked="checked">'
+    if (domande[n].optionC != "") {
+        str += '<div class="form-check">'
+        if (risposteDate[num] == "optionC") {
+            str += '<input class="form-check-input" disabled type="radio" name="exampleRadios"  id="optionC" checked="checked">'
+        }
+        else {
+            str += '<input class="form-check-input" disabled type="radio" name="exampleRadios"  id="optionC">'
+        }
+        str += '<label class="form-check-label" for="optionC">'
+        if (risposteCorrette[num] == "optionC") {
+            str += '<b>' + domande[n].optionC + '</b>';
+        }
+        else {
+            str += domande[n].optionC;
+        }
+        str += '</label>'
+        str += '</div>'
     }
-    else {
-        str += '<input class="form-check-input" disabled type="radio" name="exampleRadios"  id="optionC">'
-    }
-    str += '<label class="form-check-label" for="optionC">'
-    if (risposteCorrette[num] == "optionC") {
-        str += '<b>' + domande[n].optionC + '</b>';
-    }
-    else {
-        str += domande[n].optionC;
-    }
-    str += '</label>'
-    str += '</div>'
     if (domande[n].optionD != "") {
         str += '<div class="form-check">'
         if (risposteDate[num] == "optionD") {
@@ -645,3 +650,18 @@ window.addEventListener('beforeunload', function (e) {
   // Chrome requires returnValue to be set
     e.returnValue = 'Leaving this page will reset the wizard';
 });
+
+
+
+
+// PER COPIARE
+    //{
+    //    "question": "",
+    //    "optionA": "",
+    //    "optionB": "",
+    //    "optionC": "",
+    //    "optionD": "",
+    //    "optionE": "",
+    //    "optionF": "",
+    //    "correct": "optionC"
+    //}
