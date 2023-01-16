@@ -371,7 +371,7 @@
         "correct": "optionA"
     },
     {
-        "question": "Indexing is useful in a database for fast searching. Generally, B-tree is used for indexing in a database. Now, you want to use Binary Search Tree instead of B-tree. Suppose there are numbers between 1 and 100 and you want to search the number 35 using Binary Search Tree algorithm. Which of the following sequences CANNOT be the sequence for the numbers examined?",
+        "question": "Indexing is useful in a database for fast searching. Generally, B-tree is used for indexing in a database. Now, you want to use Binary Search Tree instead of B-tree. Suppose there are numbers between 1 and 100 and you want to search the number 55 using Binary Search Tree algorithm. Which of the following sequences CANNOT be the sequence for the numbers examined?",
         "optionA": "10, 75, 64, 43, 60, 57, 55",
         "optionB": "90, 12, 68, 34, 62, 45, 55",
         "optionC": "9, 85, 47, 68, 43, 57, 55",
